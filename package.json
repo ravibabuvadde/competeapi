@@ -4,7 +4,7 @@
   "description": "api for competitive programming",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server"
   },
   "author": "",
   "license": "ISC",
