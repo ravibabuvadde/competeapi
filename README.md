@@ -37,7 +37,7 @@
 ### **Example**
 #### Example request :
 ```[https://competeapi.vercel.app/user/codeforces/bharanispace/```<br>
-    *[https://competeapi.vercel.app/user/codeforces/bharanispace/](https://competeapi.vercel.app/user/codechef/bharanispace/)*
+    *[https://competeapi.vercel.app/user/codeforces/bharanispace/](https://competeapi.vercel.app/user/codeforces/bharanispace/)*
 
 #### Example response :
 ```json
