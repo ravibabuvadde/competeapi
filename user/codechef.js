@@ -1,6 +1,7 @@
 const cheerio = require('cheerio');
 const express = require('express');
 const router = express.Router();
+const axios = require('axios');
 
 router.get('/', (req, res) => {
     res.send('Hello World! from leetcode');
@@ -8,7 +9,7 @@ router.get('/', (req, res) => {
 
 router.get('/:username', async (req, res) => {
     let $;
-    let userinfo = await fetch('https://www.codechef.com/users/'+req.params.username,{
+    let userinfo = await axios.get('https://www.codechef.com/users/'+req.params.username,{
         redirect: 'manual'
     }) 
         .then((response) => response.text())
