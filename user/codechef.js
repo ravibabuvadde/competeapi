@@ -10,10 +10,14 @@ router.get('/', (req, res) => {
 router.get('/:username', async (req, res) => {
     let $;
     let userinfo = await axios.get('https://www.codechef.com/users/'+req.params.username,{
-        redirect: 'manual'
+        headers: {
+            redirect: 'manual'
+        }
     }) 
-        .then((response) => response.text())
-        .then((data)=>{$ = cheerio.load(data)});
+        .then((data)=>{$ = cheerio.load(data.data);})
+        .catch((error) => {
+            console.log(error);
+        })
         
 
         let script = $('main script').last().text();
@@ -25,13 +29,13 @@ router.get('/:username', async (req, res) => {
         
 
         let userdata = {
-            username: $('.m-username--link').text(),
+            username: '',
             rating: $('.rating').first().text(),
             rating_number: parseInt($('.rating-number').text()),
             country: $('.user-country-name').text(),
             user_type: '',
             institution: '',
-            organiasation: '',
+            organisation: '',
             global_rank: $('.rating-ranks ul li').first().find('strong').text(),
             country_rank: $('.rating-ranks ul li').last().find('strong').text(),
             max_rank: parseInt($('.rating-header small').text().match(/\d+/)),
@@ -43,7 +47,10 @@ router.get('/:username', async (req, res) => {
             }else if($(item).find('label').text() == 'Institution:'){
                 userdata.institution = $(item).find('span').text();
             }else if($(item).find('label').text() == 'Organisation:'){
-                userdata.organiasation = $(item).find('span').text();
+                userdata.organisation = $(item).find('span').text();
+            
+            }else if($(item).find('label').text() == 'Username:'){
+                userdata.username = $(item).find('span').last().text();
             }
         });
 

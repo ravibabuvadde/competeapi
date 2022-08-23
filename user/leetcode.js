@@ -52,8 +52,7 @@ router.get('/:username', (req, res) => {
     })
     .catch((error) => {
         res.send(error);
-    }
-    );
+    });
     
 });
 
