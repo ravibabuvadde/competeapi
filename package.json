@@ -1,0 +1,17 @@
+{
+  "name": "cp-api",
+  "version": "1.0.0",
+  "description": "api for competitive programming",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12"
+  }
+}
