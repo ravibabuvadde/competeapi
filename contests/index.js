@@ -6,5 +6,7 @@ router.get('/', (req, res) => {
 });
 
 router.use('/codechef', require('./codechef'));
+router.use('/codeforces', require('./codeforces'));
+router.use('/leetcode', require('./leetcode'));
 
 module.exports = router;
