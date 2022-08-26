@@ -24,6 +24,7 @@
 
 #### **Use :**
 
+#### User Info
 - get leetcode user info<br>
 ```https://competeapi.vercel.app/user/leetcode/<username>/```<br>
     This will return Leetcode user info in json format.
@@ -32,14 +33,14 @@
     This will return Codechef user info in json format.
 - get codeforces user info<br>
 ```https://competeapi.vercel.app/user/codeforces/<username>/```<br>
-    This will return Codeforces user info in json format.
+    This will return Codeforces user info in json format.<br>
 
 ### **Example**
-#### Example request :
+#### Example request for user info:
 ```[https://competeapi.vercel.app/user/codeforces/bharanispace/```<br>
     *[https://competeapi.vercel.app/user/codeforces/bharanispace/](https://competeapi.vercel.app/user/codeforces/bharanispace/)*
 
-#### Example response :
+#### Example response for user info:
 ```json
 [
   {
@@ -69,5 +70,45 @@
     ]
   }
 ]
+
+```
+
+#### Contests Info
+- get leetcode contests info<br>
+```https://competeapi.vercel.app/contests/leetcode/```<br>
+    This will return Leetcode user info in json format.
+- get codechef contests info <br>
+```https://competeapi.vercel.app/contests/codechef/```<br>
+    This will return Codechef user info in json format.
+- get codeforces contests info<br>
+```https://competeapi.vercel.app/contests/codeforces/```<br>
+    This will return Codeforces user info in json format.
+    
+### Example
+
+#### Example request for contests info:
+```[https://competeapi.vercel.app/contests/leetcode/```<br>
+    *[https://competeapi.vercel.app/contests/leetcode/](https://competeapi.vercel.app/contests/leetcode/)*
+
+#### Example response for contests info:
+```json
+{
+  "data": {
+    "topTwoContests": [
+      {
+        "title": "Weekly Contest 308",
+        "startTime": 1661653800,
+        "duration": 5400,
+        "cardImg": null
+      },
+      {
+        "title": "Biweekly Contest 86",
+        "startTime": 1662215400,
+        "duration": 5400,
+        "cardImg": "https://assets.leetcode.com/contest/biweekly-contest-86/card_img_1661011324.png"
+      }
+    ]
+  }
+}
 
 ```
