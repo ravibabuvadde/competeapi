@@ -4,19 +4,19 @@ const axios = require('axios');
 
 
 router.get('/', (req, res) => {
-    axios.post('https://leetcode.com/graphql',{
-      headers: {
-          'Content-Type': 'application/json',
-      },
-      query: `{
-        topTwoContests{
-          title
-          startTime
-          duration
-          cardImg
-        }
-      }`
-  })
+      axios.post('https://leetcode.com/graphql',{
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        query: `{
+          topTwoContests{
+            title
+            startTime
+            duration
+            cardImg
+          }
+        }`
+      })
       .then((response) => {
           res.send(response.data);
       })
