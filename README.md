@@ -74,6 +74,35 @@
 ```
 
 #### Contests Info
+
+#### Upcoming Contests
+- Upcoming Contests of all sites
+```https://competeapi.vercel.app/contests/upcoming/```<br>
+    This will return all future contests
+    
+#### Response
+```
+[
+  {
+    "site": "codeforces",
+    "title": "Codeforces Round #817 (Div. 4)",
+    "startTime": 1661870100000,
+    "duration": 8100000,
+    "endTime": 1661878200000,
+    "url": "https://codeforces.com/contest/1722"
+  },
+  {
+    "site": "codechef",
+    "title": "Starters 54 (Rated for Div 2, 3 & 4)",
+    "startTime": 1661956200000,
+    "duration": 10800000,
+    "endTime": 1661967000000,
+    "url": "https://www.codechef.com/START54"
+  }
+]
+```
+
+
 - get leetcode contests info<br>
 ```https://competeapi.vercel.app/contests/leetcode/```<br>
     This will return Leetcode user info in json format.
