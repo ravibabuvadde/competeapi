@@ -76,9 +76,12 @@
 #### Contests Info
 
 #### Upcoming Contests
-- Upcoming Contests of all sites
+- Upcoming Contests of all sites<br>
 ```https://competeapi.vercel.app/contests/upcoming/```<br>
     This will return all future contests
+    
+#### Request
+[https://competeapi.vercel.app/contests/upcoming/](https://competeapi.vercel.app/contests/upcoming/)
     
 #### Response
 ```
