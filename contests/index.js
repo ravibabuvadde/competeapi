@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 const cors = require('cors');
-
+process.env.TZ = 'Asia/Kolkata'
 
 router.use(cors());
 
@@ -13,7 +13,7 @@ const parseCodechef = (data) => {
         contest.site = 'codechef';
         contest.title = data[i].contest_name;
         contest.startTime = data[i].contest_start_date;
-        let date = new Date(new Date(contest.startTime.toLocaleString("en-US", { timeZone: "UTC" })).toLocaleString("en-US", { timeZone: "IST" }))
+        let date = new Date(contest.startTime)
         let milliseconds = date.getTime()
         contest.startTime = milliseconds;
         contest.duration = data[i].contest_duration*60*1000;
