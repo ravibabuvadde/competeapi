@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compete API</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Compete API</h1>
+
+    <!-- GitHub badges/links section -->
+
+    <div class="github">
+        <a href="https://github.com/ravibabuvadde/competeapi">
+            <img src="https://img.shields.io/badge/view on GitHub-0D1117?style=for-the-badge&logo=github" alt="GitHub repo size">
+        </a>
+        <a href="https://github.com/ravibabuvadde/competeapi">
+            <img src="https://img.shields.io/github/stars/ravibabuvadde/competeapi?style=for-the-badge&color=0D1117&labelColor=1A1E23" alt="GitHub stars">
+        </a>
+        <a href="https://github.com/ravibabuvadde/competeapi">
+            <img src="https://img.shields.io/github/forks/ravibabuvadde/competeapi?style=for-the-badge&color=0D1117&labelColor=1A1E23" alt="GitHub forks">
+        </a>
+    </div>
+
+
+    <div class="container">
+        <h2>Contests :</h2>
+        <div class="contests">
+            <div class="contest">
+                <h3>1. All Contests</h3>
+                <h4>Endpoint : <a href="../contests/upcoming">/contests/upcoming</a></h4>
+                
+                <div class="returns">
+                    Return type: JSON
+                    value: Array of all contests
+
+                </div>
+
+                <table>
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>site</td>
+                        <td> Name of the site / platform </td>
+                    </tr>
+
+                    <tr>
+                        <td>title</td>
+                        <td> Name of the contest </td>
+                    </tr>
+                    <tr>
+                        <td>startTime</td>
+                        <td> Start time of the contest </td>
+
+                    </tr>
+                    <tr>
+                        <td>duration</td>
+                        <td> Duration of the contest </td>
+                    </tr>
+                    <tr>
+                        <td>endTime</td>
+                        <td> End time of the contest </td>
+                    </tr>
+                    <tr>
+                        <td>url</td>
+                        <td> URL of the contest </td>
+                    </tr>
+                </table>
+
+                <div class="response">
+                    <h4>Response</h4>
+                    <div class="json-code">
+                        [
+                        {
+                          "site": "codeforces",
+                          "title": "Codeforces Round #842 (Div. 2)",
+                          "startTime": 1672929300000,
+                          "duration": 7200000,
+                          "endTime": 1672936500000,
+                          "url": "https://codeforces.com/contest/1768"
+                        },
+                        {
+                          "site": "leetcode",
+                          "title": "Biweekly Contest 95",
+                          "startTime": 1673101800000,
+                          "duration": 324000000,
+                          "endTime": 1673425800000,
+                          "url": "https://leetcode.com/contest/biweekly-contest-95"
+                        },
+                        {
+                          "site": "leetcode",
+                          "title": "Weekly Contest 327",
+                          "startTime": 1673145000000,
+                          "duration": 324000000,
+                          "endTime": 1673469000000,
+                          "url": "https://leetcode.com/contest/weekly-contest-327"
+                        }
+                      ]
+                    </div>
+                </div>
+
+            </div>
+            <div class="contest">
+                <h3>2. Codeforces Contests</h3>
+                <h4>Endpoint : <a href="../contests/codeforces">/contests/codeforces</a></h4>
+                
+                <div class="returns">
+                    Returns : Array of all codeforces contests
+
+                </div>
+
+                <table>
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>site</td>
+                        <td> Name of the site / platform </td>
+                    </tr>
+
+                    <tr>
+                        <td>title</td>
+                        <td> Name of the contest </td>
+                    </tr>
+                    <tr>
+                        <td>startTime</td>
+                        <td> Start time of the contest </td>
+
+                    </tr>
+                    <tr>
+                        <td>duration</td>
+                        <td> Duration of the contest </td>
+                    </tr>
+                    <tr>
+                        <td>endTime</td>
+                        <td> End time of the contest </td>
+                    </tr>
+                    <tr>
+                        <td>url</td>
+                        <td> URL of the contest </td>
+                    </tr>
+                </table>
+
+                <div class="response">
+                    <h4>Response</h4>
+                    <div class="json-code">
+                        [
+                            {
+                                "site": "codeforces",
+                                "title": "Codeforces Round #842 (Div. 2)",
+                                "startTime": 1672929300000,
+                                "duration": 7200000,
+                                "endTime": 1672936500000,
+                                "url": "https://codeforces.com/contests/1768"
+                            },
+                            {
+                                "site": "codeforces",
+                                "title": "Educational Codeforces Round 141 (Rated for Div. 2)",
+                                "startTime": 1673188500000,
+                                "duration": 7200000,
+                                "endTime": 1673195700000,
+                                "url": "https://codeforces.com/contests/1783"
+                            }
+                        ]
+                    </div>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
