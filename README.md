@@ -20,7 +20,7 @@
 ```https://competeapi.vercel.app/user/<platform>/<username>/```<br>
     This will return user info in json format.
 
-#### **Platforms :**
+#### **Contest Platforms :**
 1. codeforces<br>
 2. codechef<br>
 3. leetcode<br>
