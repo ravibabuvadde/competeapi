@@ -112,8 +112,8 @@ router.get('/upcoming/', async (req, res) => {
     res.send(sorted);
 });
 
-router.use('/codechef', require('./codechef'));
-router.use('/codeforces', require('./codeforces'));
-router.use('/leetcode', require('./leetcode'));
+router.use('/:platform', ()=>{
+    require('./platforms')(router);
+});
 
 module.exports = router;
